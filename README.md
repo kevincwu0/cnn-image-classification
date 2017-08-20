@@ -127,4 +127,8 @@ Overview:
       - Input Image -> Convolution Layer -> Pooling Layer
     - http://scs.ryerson.ca/~aharley/vis/conv/flat.html
       - Pooling and downsampling are synonymous
-    
+- Step 3: Flattening
+  - Pooled Feature Map (After applying convolution + pooling)
+  - Pooled Feature Map -> Flattening (to Columns, for processing of ANN)
+  - Pooling Layer -> Flattening -> Vector of Inputs for future ANN
+  - Input Layer -> Convolutional Layer -> Pooling -> Flattening 
