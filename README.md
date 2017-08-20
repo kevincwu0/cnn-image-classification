@@ -132,3 +132,23 @@ Overview:
   - Pooled Feature Map -> Flattening (to Columns, for processing of ANN)
   - Pooling Layer -> Flattening -> Vector of Inputs for future ANN
   - Input Layer -> Convolutional Layer -> Pooling -> Flattening 
+- Step 4: Full Connection
+  - In this step adding a whole ANN to the Convolutional Neural Network (CNN) 
+  - Flattening -> Input Layer -> Fully Connected Layer (but more specific hidden layer that are connected) -> Output Value
+  - Pass values to ANN to further optimize
+  - Flattening -> 5 Attributes (Input), Six Neurons and Eight Neurons, Output(Dog and Cat)
+    - Output classification, output per classes (could've been binary if two)
+    - More than two categories, neuron per every category
+    - Prediction is made (80% dog, -> cat) 
+    - Error is calculated, Loss Function (Cost Function) -> Cross Entropy Errors and Mean Square Errors
+    - Minimize that function and backpropagated to the network, weights are adjusted in synapses and feature detector is adjusted in CNNs, gradient descent, mathematical
+    - Data goes from the start the very end
+    - Same story, a bit longer
+  - How do these two output neurons work? Rather than one?
+    - Dog neuron -> what weights to assign to all of the synapses connected to the dog
+    - neurons, features of an image (very processed in ANN), neuron will fire up when a dog, cat neuron ignore flappy ears, lots of iterations, 0.1 to 1.0, lighting up very often when dog, more significance placed on that dog. Many samples and epochs, dog neuron and eye brow neuron, floppy ears neuron contribute well to the classification it is looking for. Cat is ignoring neurons related to dog
+    - Cat Neuron -> (whiskers, small size, pointy ears, cat eyes) 
+    - Features propogated to the output, distinctive feature of that class, network is trained, backpropagation feature detector, 1000s of iteration, disregarded, final layer of neurons, combination of dogs and cats.
+    - Example (dog) -> no idea of what the image is but have learned which neurons to look for, probability 0.95, cat 0.05
+    - Example (cats) -> high and low, dog 0.21, cat 0.79
+    - voting is used for final fully connected layer, which neurons get to vote, learn weights vary based on importance relative to the ouput neuron
