@@ -152,3 +152,15 @@ Overview:
     - Example (dog) -> no idea of what the image is but have learned which neurons to look for, probability 0.95, cat 0.05
     - Example (cats) -> high and low, dog 0.21, cat 0.79
     - voting is used for final fully connected layer, which neurons get to vote, learn weights vary based on importance relative to the ouput neuron
+
+- Summary
+1. Input Image to which we apply multiple different feature detectors (filters) to create feature maps which comprise of our convolution layer.
+2. On top of Convolution Layer we apply ReLU to remove any linearity, increase non-linearity
+3. Apply pooling layer to our convolutional layer, every single feature map we create a pool feature map, has lots of advantages and the main is to make sure that we have spacial invariance in our images (tilts, twists, distort) we can still pick up the features and pooling also reduces the size of our images and helps avoid overfitting of our model to the data by simply getting rid a lot of that data. Same time, pooling preserves features.
+4. Flattened all of the pooled images into one long vector or column of values and input that into an ANN
+5. Fully-connected Artificial Neural Network where all of the features are processed through the network and we have this final fully-connected layer which performs the voting towards the classes we're after. Trained through forward-propagation and backwards-propagation.
+6. Lots of epochs, well-defined neural network; weights are trained but also feature detector are trained and adjusted in the same gradient descent process allowing us to create the best feature maps. We get a fully-trained convolutional neural network which can recognize images and classify them.
+
+Adit Deshpande, 2016, The 9 Deep Learning Papers You Need To Know About (Understanding CNNs Part 3) - https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html
+- Nine different CNNs overview and study further
+- Lots of value and how they structured their CNNs and help with architecture, architecture challenge get to the best possible design and performance.
