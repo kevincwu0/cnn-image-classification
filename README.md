@@ -164,3 +164,42 @@ Overview:
 Adit Deshpande, 2016, The 9 Deep Learning Papers You Need To Know About (Understanding CNNs Part 3) - https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html
 - Nine different CNNs overview and study further
 - Lots of value and how they structured their CNNs and help with architecture, architecture challenge get to the best possible design and performance.
+
+- Softmax and Cross-Entropy
+  - Convolutional Neural Network -> Pops out probability for dogs (0.95) and cat (0.05), after training conducted
+  - How can these two values add up to one? As far as we know how'd do they know
+  - Traditionally they won't, but applying Softmax function we can bring these values between 0 and 1
+  - Softmax squashes a k-dimension vector, brings it to be between 0 and 1 and add up to 1, possible due to summation 
+  - Makes sense to introduce Softmax to CNN (weird 80% for dogs, and 45% for cats)
+  - Softmax comes hand-in-hand with Cross Entropy function
+  - What is the Cross Entropy Function?
+    - Mean square error function (cost function in ANN, MSE minimize it is the goal)
+    - We can still use MSE but Cross Entropy Function is Better in CNN
+    - Called the Loss Function (vs. Cost Function) 
+    - Loss function we want to minimize to maximize performance of network
+  - Example of how Cross-Entropy & Softmax
+    - Dog 0.9 Cat 0.1 => H(p,q) = -∑ p(x)logq(x) cross entropy
+  - Example 
+    - NN1 NN2
+    - Pass image of dog  NN1 (0.9), NN2 (0.6)
+    - Pass image of cat  NN1 (0.1), NN2 (0.3)
+    - Pass image of dog  NN1 (0.4), NN2 (0.1)
+  - Classification Error 
+    - Did you get it right or not regardless of probability?
+    - Not a good measure, especially for backpropagation
+    - 0.33 vs 0.33
+  - Mean Squared Error
+    - 0.25 vs 0.71 e.g.
+    - more accurate
+  - Cross Entropy
+    - 0.38 vs 1.06 e.g.
+  - Why Cross Entropy > Mean Squared Error
+    - Not just about numbers 
+    - For instance, very start of backpropagation your output is very low, gradient is very low, hard for neural network to adjust the weights
+    - Versus Cross Entropy with logarithm helps out
+    - Intuitive approach: You want an outcome of 1, but right now 0.000001 and improve next to 0.001, squared error didn't improve that much; but looking at Cross Entropy you will see have improved network significant from one millionth to thousandths, in relative terms big improvement. Cross Entropy helps NN to get to the optimal state. 
+    - Cross Entropy only the preferred method for classification; regression better for MSe
+    - Geofrey Hinton Softmax and Cross-Entropy
+    - Cross Entropy tailored for Classification and CNN and comes hand-in-hand with Softmax
+  - Rob DiPietro, 2016, A Friendly Introduction to Cross-Entropy Loss https://rdipietro.github.io/friendly-intro-to-cross-entropy-loss/
+  - Peter Roelants, 2016, How to implement a neural network Intermezzo 2 - https://peterroelants.github.io/posts/neural_network_implementation_intermezzo02/ Inter
