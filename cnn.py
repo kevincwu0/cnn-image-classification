@@ -48,3 +48,8 @@ classifier.add(Flatten())
 # Step 4 - Full Connection
 classifier.add(Dense(output_dim = 128, activation = 'relu'))
 classifier.add(Dense(output_dim = 1, activation = 'sigmoid'))
+
+# Compile - SGD, Loss Function, Performance Metric
+# Logarithmic loss - binary cross entropy, more than two outcomes, categorical cross entropy
+# Metrics is the accuracy metric
+classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
