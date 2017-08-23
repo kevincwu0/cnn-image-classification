@@ -43,3 +43,8 @@ classifier.add(MaxPooling2D(pool_size = (2, 2)))
 # But if we apply convolution and pooling, since feature map corresponds to each feature 
 # of an image, specific image unique pixels, we keep the spatial structure of the picture.
 classifier.add(Flatten())
+
+
+# Step 4 - Full Connection
+classifier.add(Dense(output_dim = 128, activation = 'relu'))
+classifier.add(Dense(output_dim = 1, activation = 'sigmoid'))
