@@ -189,10 +189,10 @@ Adit Deshpande, 2016, The 9 Deep Learning Papers You Need To Know About (Underst
     - Not a good measure, especially for backpropagation
     - 0.33 vs 0.33
   - Mean Squared Error
-    - 0.25 vs 0.71 e.g.
+    - 0.25 vs 0.71 
     - more accurate
   - Cross Entropy
-    - 0.38 vs 1.06 e.g.
+    - 0.38 vs 1.06 
   - Why Cross Entropy > Mean Squared Error
     - Not just about numbers 
     - For instance, very start of backpropagation your output is very low, gradient is very low, hard for neural network to adjust the weights
