@@ -31,6 +31,10 @@ classifier.add(Conv2D(32, (3, 3), input_shape = (64, 64, 3), activation = 'relu'
 # without losing performance, don't lose spatial structure
 classifier.add(MaxPooling2D(pool_size = (2, 2)))
 
+# Adding second convolution layer
+# don't need to include input_shape since we're done it
+classifier.add(Conv2D(32, (3, 3), activation = 'relu'))
+classifier.add(MaxPooling2D(pool_size = (2, 2)))
 
 # Step 3 - Flattening
 # Pooled Feature Maps apply flattening maps to a huge vector 
